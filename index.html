@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Обратный отсчёт</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="main">
+            <input class="input-date" v-model="userDatetime" type="datetime-local">        
+            <p>now: {{ nowSeconds }}</p>
+            <p v-if="between < 0">countdown is over</p>
+            <p v-if="years > 0">{{years}} years</p>
+            <p v-if="months > 0">{{months}} months</p>
+            <p v-if="days > 0">{{days}} days</p>
+            <p v-if="hours > 0">{{hours}} hours</p>
+            <p v-if="minutes > 0">{{minutes}} minutes</p>
+            <p v-if="seconds > 0">{{seconds}} seconds</p>
+            <p v-if="between > 0 ">until  {{ userSeconds }}</p>            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
