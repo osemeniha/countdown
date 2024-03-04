@@ -9,7 +9,7 @@
 <body>
     <div id="app">
         <div class="main">
-            <input class="input-date" v-model="userDatetime" type="datetime-local">        
+            <input id="date" class="input-date" v-model="userDatetime" type="datetime-local">        
             <p>now: {{ nowSeconds }}</p>
             <p v-if="between < 0">countdown is over</p>
             <p v-if="years > 0">{{years}} years</p>

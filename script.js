@@ -36,4 +36,5 @@ var vue = new Vue ({
         }, 1000);
         this.nowSeconds = new Date(Date.now());
       }
-})
+});
+document.getElementById("date").min = new Date().toISOString().slice(0,new Date().toISOString().lastIndexOf(":"));
