@@ -12,6 +12,11 @@ var vue = new Vue ({
         months: '',
         years: ''
     },
+    watch: {
+        userDatetime(){
+            localStorage.setItem("userDatetime", JSON.stringify(this.userDatetime));
+        }
+    },
     methods: {
         split(){
             this.nowSeconds = new Date(Date.now());
@@ -31,6 +36,7 @@ var vue = new Vue ({
         }
     },
     mounted() {
+        this.userDatetime = JSON.parse(localStorage.getItem("userDatetime")) || '';
         setInterval(() => {
           this.split();
         }, 1000);
